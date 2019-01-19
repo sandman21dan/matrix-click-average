@@ -7,6 +7,7 @@
     "build:js": "babel ./index.js | uglifyjs --compress --mangle > index.min.js",
     "build": "npm run build:js && npm run build:css",
     "start": "http-server -c-1",
+    "update:files": "JS_VERSION=`md5sum index.min.js | cut -c1-7` CSS_VERSION=`md5sum style.min.css | cut -c1-7` envsubst < index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Daniel Perez",
