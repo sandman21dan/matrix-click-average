@@ -11,7 +11,7 @@ matrix.addEventListener('click', (event) => {
   const percY = percentalize(event.clientY - matrixOffset.top, scaleYMax);
 
   readings.push([percX, percY]);
-  renderClick(percX, percY, matrix);
+  renderClick(percX, percY, matrix, 'click-point--fade-out click-point--big click-point--green');
 });
 
 function renderClick (x, y, context, className) {
@@ -71,4 +71,18 @@ function renderMedian (values) {
   function sortNumAsc(a, b) {
     return a - b;
   }
+}
+
+function renderAll (values) {
+  // clear all existing dots
+  document.querySelectorAll('.box .click-point').forEach(dot => {
+    dot.parentElement.removeChild(dot);
+  });
+
+  renderMean(values);
+  renderMedian(values);
+
+  readings.forEach( reading => {
+    renderClick(reading[0], reading[1], matrix);
+  });
 }

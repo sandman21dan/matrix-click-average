@@ -2,6 +2,19 @@
   font-family: sans-serif;
 }
 
+.btn {
+  background-color: #3865f7;
+  color: white;
+  padding: 12px 40px;
+  font-size: 17px;
+  border: none;
+}
+
+.center {
+  margin: 0 auto;
+  display: block;
+}
+
 .box {
   margin: 0 auto;
   width: 80vw;
@@ -53,4 +66,22 @@
 
 .click-point--blue {
   background-color: blue;
+}
+
+.click-point--green {
+  background-color: rgb(95, 214, 95);
+}
+
+.click-point--fade-out {
+  animation: fade-out 1.5s forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
