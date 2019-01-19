@@ -13,8 +13,23 @@
   <h3 id="outputX">Click above</h3>
   <h3 id="outputY"></h3>
   <section class="legend">
-    <div class="click-point"></div>
+    <ul>
+      <li>
+          <p>Single reading</p>
+          <div class="click-point"></div>
+      </li>
+      <li>
+          <p>Mean (average)</p>
+          <div class="click-point click-point--big"></div>
+      </li>
+      <li>
+          <p>Median</p>
+          <div class="click-point click-point--big click-point--blue"></div>
+      </li>
+    </ul>
   </section>
+
+  <button onclick="renderMean(readings)" type="button">Show mean</button>
 
   <script src="index.js"></script>
 </body>

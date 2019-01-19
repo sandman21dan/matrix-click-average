@@ -17,3 +17,13 @@
   background-color: grey;
   transform: translate(-50%, -50%);
 }
+
+.click-point--big {
+  width: 8px;
+  height: 8px;
+  background-color: red;
+}
+
+.click-point--blue {
+  background-color: blue;
+}
