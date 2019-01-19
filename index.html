@@ -8,23 +8,26 @@
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 <body>
-  <div class="box" id="clickArea"></div>
+  <div class="box" id="clickArea">
+    <div class="quadrant"></div>
+    <div class="quadrant"></div>
+    <div class="quadrant"></div>
+    <div class="quadrant"></div>
+  </div>
 
-  <h3 id="outputX">Click above</h3>
-  <h3 id="outputY"></h3>
   <section class="legend">
-    <ul>
-      <li>
-          <p>Single reading</p>
-          <div class="click-point"></div>
+    <ul class="legend__items">
+      <li class="legend__item">
+        <div class="click-point"></div>
+        <p>Single reading</p>
       </li>
-      <li>
-          <p>Mean (average)</p>
-          <div class="click-point click-point--big"></div>
+      <li class="legend__item">
+        <div class="click-point click-point--big"></div>
+        <p>Mean (average)</p>
       </li>
-      <li>
-          <p>Median</p>
-          <div class="click-point click-point--big click-point--blue"></div>
+      <li class="legend__item">
+        <div class="click-point click-point--big click-point--blue"></div>
+        <p>Median</p>
       </li>
     </ul>
   </section>

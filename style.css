@@ -8,6 +8,33 @@
   height: 70vh;
   border: 1px solid lightgray;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.quadrant {
+  width: 50%;
+  height: 50%;
+  border: 1px solid grey;
+  box-sizing: border-box;
+}
+
+.legend {
+  border: 1px solid lightgray;
+  margin: 8px;
+  background-color: rgb(240,240,240);
+}
+
+.legend__items {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.legend__item {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .click-point {

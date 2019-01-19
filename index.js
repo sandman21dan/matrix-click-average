@@ -10,11 +10,7 @@ matrix.addEventListener('click', (event) => {
   const percX = percentalize(event.clientX - matrixOffset.left, scaleXMax);
   const percY = percentalize(event.clientY - matrixOffset.top, scaleYMax);
 
-  outputX.innerHTML = percX;
-  outputY.innerHTML = percY;
-
   readings.push([percX, percY]);
-
   renderClick(percX, percY, matrix);
 });
 
