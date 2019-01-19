@@ -7,4 +7,13 @@
   width: 80vw;
   height: 70vh;
   border: 1px solid lightgray;
+  position: relative;
+}
+
+.click-point {
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  background-color: grey;
+  transform: translate(-50%, -50%);
 }
