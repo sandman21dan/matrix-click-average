@@ -56,7 +56,6 @@ function renderMedian (values) {
 
   // find middle value
   if (values.length % 2 === 0) {
-    console.log(xReadings[values.length /2], xReadings[(values.length /2) - 1]);
     const medianX = (xReadings[values.length /2] + xReadings[(values.length /2) - 1]) / 2;
     const medianY = (yReadings[values.length /2] + yReadings[(values.length /2) - 1]) / 2;
 
@@ -73,11 +72,14 @@ function renderMedian (values) {
   }
 }
 
-function renderAll (values) {
-  // clear all existing dots
+function clearBoxDots () {
   document.querySelectorAll('.box .click-point').forEach(dot => {
     dot.parentElement.removeChild(dot);
   });
+}
+
+function renderAll (values) {
+  clearBoxDots();
 
   renderMean(values);
   renderMedian(values);
@@ -85,4 +87,9 @@ function renderAll (values) {
   readings.forEach( reading => {
     renderClick(reading[0], reading[1], matrix);
   });
+}
+
+function reset () {
+  clearBoxDots();
+  readings.length = 0;
 }

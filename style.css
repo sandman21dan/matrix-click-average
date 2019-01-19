@@ -8,11 +8,17 @@
   padding: 12px 40px;
   font-size: 17px;
   border: none;
+  margin-bottom: 8px;
+}
+
+.btn--red {
+  background-color: #ce4646;
 }
 
 .center {
   margin: 0 auto;
   display: block;
+  margin-bottom: 8px;
 }
 
 .box {
