@@ -46,3 +46,33 @@ function renderMean (values) {
 
   renderClick(meanX, meanY, matrix, 'click-point--big');
 }
+
+function renderMedian (values) {
+  const xReadings = values.map(reading => {
+    return reading[0];
+  });
+  const yReadings = values.map(reading => {
+    return reading[1];
+  });
+
+  xReadings.sort(sortNumAsc);
+  yReadings.sort(sortNumAsc);
+
+  // find middle value
+  if (values.length % 2 === 0) {
+    console.log(xReadings[values.length /2], xReadings[(values.length /2) - 1]);
+    const medianX = (xReadings[values.length /2] + xReadings[(values.length /2) - 1]) / 2;
+    const medianY = (yReadings[values.length /2] + yReadings[(values.length /2) - 1]) / 2;
+
+    renderClick(medianX, medianY, matrix, 'click-point--big click-point--blue');
+  } else {
+    const medianX = xReadings[Math.floor(values.length / 2)];
+    const medianY = yReadings[Math.floor(values.length / 2)];
+
+    renderClick(medianX, medianY, matrix, 'click-point--big click-point--blue');
+  }
+
+  function sortNumAsc(a, b) {
+    return a - b;
+  }
+}
