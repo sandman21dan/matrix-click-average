@@ -93,3 +93,8 @@ function reset () {
   clearBoxDots();
   readings.length = 0;
 }
+
+// export global functions
+window.renderAll = renderAll;
+window.reset = reset;
+window.readings = readings;
