@@ -3,21 +3,18 @@
   "version": "1.0.0",
   "description": "An average calculation of many clicks on a graph matrix",
   "scripts": {
-    "build:css": "cleancss -o style.min.css style.css",
-    "build:js": "babel ./index.js | uglifyjs --compress --mangle > index.min.js",
-    "build": "npm run build:js && npm run build:css",
-    "start": "http-server -c-1",
-    "update:files": "JS_VERSION=`md5sum index.min.js | cut -c1-7` CSS_VERSION=`md5sum style.min.css | cut -c1-7` envsubst < index.html",
+    "build": "parcel build src/index.html",
+    "clean": "rm -rf .parcel-cache dist",
+    "serve:dist": "http-server dist -c-0",
+    "start": "parcel serve src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Daniel Perez",
   "license": "ISC",
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
-    "clean-css-cli": "^4.2.1",
-    "http-server": "^0.11.1",
-    "uglify-js": "^3.4.9"
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "http-server": "^0.12.3",
+    "parcel": "^2.0.0-beta.2",
+    "typescript": "^4.2.4"
   }
 }
