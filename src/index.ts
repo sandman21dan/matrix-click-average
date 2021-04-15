@@ -1,3 +1,5 @@
+import { MatrixPoint } from './types';
+
 const matrix = document.getElementById('clickArea');
 const outputX = document.getElementById('outputX');
 const outputY = document.getElementById('outputY');
@@ -5,7 +7,6 @@ const matrixOffset = matrix.getClientRects()[0];
 const scaleXMax = matrixOffset.width;
 const scaleYMax = matrixOffset.height;
 
-type MatrixPoint = [number, number];
 
 const readings: MatrixPoint[] = [];
 
